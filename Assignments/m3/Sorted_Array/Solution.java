@@ -47,6 +47,8 @@ public class Solution{
 		for (int i = 0;i< elements.length;i++) {
 			a[i] = Integer.parseInt(elements[i]);
 		}
+	}else{
+		sc.nextLine();
 	}
 	    if(n!= 0) {
 		elements = sc.nextLine().split(",");
