@@ -41,14 +41,19 @@ public class Solution{
 		int n = Integer.parseInt(sc.nextLine());
 		int[]a = new int[m];
 		int[]b = new int[n];
-		String[] elements = sc.nextLine().split(",");
+		String[] elements;
+		if(m!= 0){
+		 elements = sc.nextLine().split(",");
 		for (int i = 0;i< elements.length;i++) {
 			a[i] = Integer.parseInt(elements[i]);
 		}
+	}
+	    if(n!= 0) {
 		elements = sc.nextLine().split(",");
 		for (int i = 0;i< elements.length;i++) {
 			b[i] = Integer.parseInt(elements[i]);
 		}
+	}
 		new Solution().mergeArrays(a,b);
 
 
