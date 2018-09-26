@@ -10,7 +10,7 @@ public class Solution{
 	 * @param      a     { parameter_description }
 	 * @param      b     { parameter_description }
 	 */
-	public void mergeArrays(int[] a,int[] b){
+	public void mergeArrays(final int[] a,final int[] b){
 		/**.
 		 * { var_description }
 		 */
@@ -51,7 +51,7 @@ public class Solution{
 	 *
 	 * @param      args  The arguments
 	 */
-	public static void main(String[] args) {
+	public static void main(final String[] args) {
 		/**.
 		 * { var_description }
 		 */
@@ -60,10 +60,10 @@ public class Solution{
 		int m = Integer.parseInt(sc.nextLine());
 		// reading second line input
 		int n = Integer.parseInt(sc.nextLine());
-		int[]a = new int[m];
-		int[]b = new int[n];
-		String[] elements;
-		if(m!= 0){
+		int[] a = new int[m];
+		int[] b = new int[n];
+		String [] elements;
+		if (m!= 0){
 		 elements = sc.nextLine().split(",");
 		for (int i = 0; i < elements.length; i++) {
 			a[i] = Integer.parseInt(elements[i]);
@@ -71,13 +71,13 @@ public class Solution{
 	}else{
 		sc.nextLine();
 	}
-	    if(n!= 0) {
+	    if (n!= 0) {
 		elements = sc.nextLine().split(",");
-		for (int i = 0;i< elements.length;i++) {
+		for (int i = 0; i < elements.length; i++) {
 			b[i] = Integer.parseInt(elements[i]);
 		}
 	}
-		new Solution().mergeArrays(a,b);
+		new Solution().mergeArrays(a, b);
 
 
 	}
