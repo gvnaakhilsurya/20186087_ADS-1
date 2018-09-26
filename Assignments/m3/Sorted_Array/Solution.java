@@ -15,8 +15,11 @@ public class Solution{
 			}
 
 		}
-		System.out.println(Arrays.toString(c));
-
+		int x;
+		for (x=0;x<c.length-1;x++) {
+			System.out.print(c[x]+",");
+		}
+		System.out.println(c[x]);
 	}
 	public static void main(String[] args) {
 		Scanner sc = new Scanner (System.in);
