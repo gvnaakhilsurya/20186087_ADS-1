@@ -13,8 +13,20 @@ public class Solution{
 				c[k++] = b[j];
 				j++;
 			}
-
 		}
+			if(i == a.length){
+				while(j<b.length){
+					c[k++]= b[j];
+					j++;
+				}
+			}
+			else {
+					while(i<a.length) {
+					c[k++] = a[i];
+					i++;
+
+				}
+			}
 		int x;
 		for (x=0;x<c.length-1;x++) {
 			System.out.print(c[x]+",");
