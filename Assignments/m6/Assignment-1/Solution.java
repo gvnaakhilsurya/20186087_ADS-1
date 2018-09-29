@@ -6,19 +6,13 @@ class AddLargeNumbers {
         LinkedList ll = new LinkedList();
          String[] digits=number.split("");
         for (int i = 0; i<digits.length; i++) {
-            /*System.out.println(number.charAt(i));*/
             ll.add(digits[i]);
-            
-            /*System.out.print(Arrays.toString(ll));*/
-        }
-        /*System.out.print(ll.displayAll());*/
-        /*System.out.println(ll);*/
+            }
 
         return ll;
     }
     public static String digitsToNumber(LinkedList list) {
         String str="";
-
         for(int i=0; i < list.size(); i++){
             str+=list.get(i);
         }
