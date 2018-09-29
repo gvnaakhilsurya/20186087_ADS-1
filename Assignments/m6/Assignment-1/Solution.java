@@ -1,8 +1,18 @@
 import java.util.Scanner;
 import java.util.*;
 class AddLargeNumbers {
+    /**.
+     * { function_description }
+     *
+     * @param      number  The number
+     *
+     * @return     { description_of_the_return_value }
+     */
     
     public static LinkedList numberToDigits(String number) {
+        /**.
+         * { var_description }
+         */
         LinkedList ll = new LinkedList();
          String[] digits=number.split("");
         for (int i = 0; i<digits.length; i++) {
@@ -12,6 +22,9 @@ class AddLargeNumbers {
         return ll;
     }
     public static String digitsToNumber(LinkedList list) {
+        /**.
+         * { var_description }
+         */
         String str="";
         for(int i=0; i < list.size(); i++){
             str+=list.get(i);
@@ -20,12 +33,20 @@ class AddLargeNumbers {
     }
 
     public static LinkedList addLargeNumbers(LinkedList list1, LinkedList list2) {
+        /**
+         * { item_description }
+         */
         
     return null;
     }
 }
 
 public class Solution {
+    /**.
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
