@@ -13,9 +13,9 @@ public final class Solution {
 
 /**
  * @brief The main method does the conversion of input
- * into the integer array and does the binary search operation and 
+ * into the integer array and does the binary search operation and
  * finds whether the sum of  given three numbers are
- * equal to be zero or not.It returns the boolen data whether it is 
+ * equal to be zero or not.It returns the boolen data whether it is
  * corect or not.
  * @details [long description]
  *
@@ -23,7 +23,7 @@ public final class Solution {
  */
  public static void main(final String[] args) {
     /**
-     * It is the main method which does the operation of the 
+     * It is the main method which does the operation of the
      * given input into the integer array and does the binary search.
      */
 
