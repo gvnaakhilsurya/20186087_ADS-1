@@ -96,6 +96,7 @@ public class Solution{
 			Team team = new Team(tokens[0],Integer.parseInt(tokens[1]),Integer.parseInt(tokens[2]),Integer.parseInt(tokens[3]));
 			teams[i++] = team;
 		}
+		Selection.sort(teams);
 	}
 
 }
