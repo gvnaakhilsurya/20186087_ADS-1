@@ -110,7 +110,6 @@ public class Solution{
 		}
 		Selection.sort(teams);
 		for (Team team : teams) {
-			System.out.println(team);
 			String output  = Arrays.toString(teams);
 			output = output.replace("[","").replace("]","").replace(", ", ",");
 			System.out.println(output);
