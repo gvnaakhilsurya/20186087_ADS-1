@@ -51,8 +51,8 @@ class Team implements Comparable<Team>{
 		if (this.wins <that.wins) return  1;
 		if (this.loses <that.loses)return -1;
 		if (this.loses >that.loses)return 1;
-		if (this.draws >that.draws)return 1;
-		if (this.draws <that.draws)return -1;
+		if (this.draws >that.draws)return -1;
+		if (this.draws <that.draws)return 1;
 		return 0;
 	}
 }
