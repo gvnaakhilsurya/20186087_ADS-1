@@ -1,10 +1,22 @@
 import java.util.*;
+/**
+ * Class for team.
+ */
 class Team implements Comparable<Team>{
 	private String teamname;
 	private int wins;
 	private int loses;
 	private int draws;
 
+
+	/**
+	 * Constructs the object.
+	 *
+	 * @param      teamname  The teamname
+	 * @param      wins      The wins
+	 * @param      loses     The loses
+	 * @param      draws     The draws
+	 */
 	Team(String teamname, int wins,int loses,int draws) {
 		this.wins = wins;
 		this.loses = loses;
@@ -99,6 +111,9 @@ public class Solution{
 		Selection.sort(teams);
 		for (Team team : teams) {
 			System.out.println(team);
+			String output  = Arrays.toString(teams);
+			output = output.replace("[","").replace("]","").replace(", ", ",");
+			System.out.println(output);
 		}
 	}
 
