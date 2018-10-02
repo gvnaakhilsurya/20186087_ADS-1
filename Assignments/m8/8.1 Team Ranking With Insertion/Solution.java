@@ -114,6 +114,7 @@ public class Solution{
 			output = output.replace("[","").replace("]","").replace(", ", ",");
 			System.out.println(output);
 		}
+
 	}
 
 }
