@@ -112,7 +112,7 @@ public class Solution{
 		for (Team team : teams) {
 			String output  = Arrays.toString(teams);
 			output = output.replace("[","").replace("]","").replace(", ", ",");
-			System.out.println(output);
+		System.out.println(output);
 		}
 
 	}
