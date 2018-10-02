@@ -109,12 +109,9 @@ public class Solution{
 			teams[i++] = team;
 		}
 		Selection.sort(teams);
-		for (Team team : teams) {
-			String output  = Arrays.toString(teams);
-			output = output.replace("[","").replace("]","").replace(", ", ",");
-			System.out.println(output);
-		}
-
+		String output  = Arrays.toString(teams);
+		output = output.replace("[","").replace("]","").replace(", ", ",");
+		System.out.println(output);
 	}
 
 }
