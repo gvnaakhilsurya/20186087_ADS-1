@@ -97,6 +97,9 @@ public class Solution{
 			teams[i++] = team;
 		}
 		Selection.sort(teams);
+		for (Team team : teams) {
+			System.out.println(team);
+		}
 	}
 
 }
