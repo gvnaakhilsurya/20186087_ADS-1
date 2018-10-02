@@ -1,9 +1,22 @@
-import java.util.*;
+import java.util.Scanner;
+import java.util.Arrays;
+/**.
+ * Class for solution.
+ */
 public class Solution{
+	/**.
+	 * \
+	 *
+	 * @param      args  The arguments
+	 */
 	public static void main(String[] args) {
+		/**.
+		 * It is the main method which converts the given input into
+		 *  the array objects and pass as parameters as for the sorting class
+		 */
 		Scanner sc = new Scanner(System.in);
 		StringBuffer sb = new StringBuffer();
-		while(sc.hasNext()){
+		while (sc.hasNext()){
 			sb.append(sc.nextLine()+"::");
 		}
 		String []lines = sb.toString().split("::");
@@ -19,5 +32,6 @@ public class Solution{
 		output = output.replace("[","").replace("]","").replace(", ", ",");
 		System.out.println(output);
 	}
+	/**By analaysis the complexity of the above method is O(N^2).**/
 
 }
