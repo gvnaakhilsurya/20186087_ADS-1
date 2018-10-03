@@ -1,7 +1,7 @@
 //import java.lang.Comparable;
 class Selection{
 	/**.
-	 * { function_description }
+	 * 
 	 *
 	 * @param      a     Comparable type array.
 	 */
@@ -19,6 +19,7 @@ class Selection{
 			}
 		exch(a, i, min);	
 		}
+		/**By analaysis the complexity of the above method is O(N^2Log(N)).**/
 		
 	}
 	/**.
@@ -53,5 +54,6 @@ class Selection{
 		a[i] = a[j];
 		a[j]= t;
 	}
+	/**By analaysis the complexity of the above method is O(1).**/
 
 }

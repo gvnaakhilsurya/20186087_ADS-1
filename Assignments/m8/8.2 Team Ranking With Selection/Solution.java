@@ -1,10 +1,15 @@
 import java.util.Scanner;
 import java.util.Arrays;
-
 /**
  * Class for solution.
  */
 public class Solution{
+
+    private Solution(){
+        /**
+         * it is counstructor.
+         */
+    }
     /**.
      * 
      *
@@ -18,7 +23,7 @@ public class Solution{
         Scanner sc = new Scanner(System.in);
         StringBuffer sb = new StringBuffer();
         final int THREE = 3;
-        while (sc.hasNext()){
+        while (sc.hasNext()) {
             sb.append(sc.nextLine() + "::");
         }
         String [] lines = sb.toString().split("::");
