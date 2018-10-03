@@ -1,0 +1,75 @@
+Which method runs faster for an array in reverse order, basic selection sort or basic insertion sort?
+
+For example an integer array of values a[] = [9, 8, 7, 6, 5, 4]
+
+By using the Selection sort, we can solve the problem
+
+			i   min   	0	1	2	3	4	5	
+
+Input   :				9	8	7	6	5	4
+
+			0	5		4	8	7	6	5	9
+
+			1	4		4	5	7	6	8	9
+
+			2	3		4	5	6	7	8	9
+
+		No.of comparisions = n
+
+		No.of exchanges  = 3
+
+By using the Insertion sort, we can solve the problem
+
+			i   j   	0	1	2	3	4	5	
+
+Input   :				9	8	7	6	5	4
+						
+			0	0		9	8	7	6	5	4
+
+			1	0		8	9	7	6	5	4
+
+			2   0       8   7   9   6	5	4
+
+						7	8	9	6	5	4
+
+			3	0		7	8	6	9	5	4
+
+						7	6	8	9	5	4
+
+						6	7	8	9	5	4
+
+			4	0		6	7	8	5	9	4
+
+						6	7	5	8	9	4
+
+						6	7	5	8	9	4
+
+						6	5	7	8	9	4
+
+						5	6	7	8	9	4
+
+			5	0		5	6	7	8	4	9
+
+						5	6	7	4	8	9
+
+						5	6	4	7	8	9
+
+						5	4	6	7	8	9
+
+						4	5	6	7	8	9
+
+
+						No.of comparisions = n^2/4
+
+						No.of exchanges  = 17
+
+Based on the no. of comparisions and the exchanges,we can say that Selection
+sort runs faster for an array in reverse order.
+
+
+
+
+
+			
+
+		

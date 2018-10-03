@@ -1,0 +1,28 @@
+
+Show, how selection sort sorts the array E A S Y Q U E S T I O N.
+
+Given input is E A S Y Q U E S T I O N
+
+i  min   0   1  2  3  4  5  6  7  8  9  10 11    
+         
+         E   A  S  Y  Q  U  E  S  T  I  O  N  
+
+0  1     A   E  S  Y  Q  U  E  S  T  I  O  N  
+
+1  1     A   E  S  Y  Q  U  E  S  T  I  O  N  
+
+2  6     A   E  E  Y  Q  U  S  S  T  I  O  N 
+
+3   9    A   E  E  I  Q  U  S  S  T  I  Y  N
+
+4  11    A   E  E  I  N  U  S  S  T  I  Y  Q
+
+5  10    A   E  E  I  N  O  S  S  T  I  U  Q
+
+6  11    A   E  E  I  N  O  Q  S  T  I  U  S
+
+7  7     A   E  E  I  N  O  Q  S  T  I  U  S
+
+8  11    A   E  E  I  N  O  Q  S  S  Y  U  T
+
+9  10    A   E  E  I  N  O  Q  S  S  T  U  Y
