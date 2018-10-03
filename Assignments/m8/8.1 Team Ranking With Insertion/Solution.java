@@ -4,11 +4,12 @@ import java.util.Arrays;
  * Class for solution.
  */
 public final class Solution {
-    /**.
-     *\
-     *
-     * @param      args  The arguments
+    /**
+     * Constructs the object.
      */
+    private Solution() {
+
+    } 
     public static void main(final String[] args) {
         /**.
          * It is the main method which converts the given input into
