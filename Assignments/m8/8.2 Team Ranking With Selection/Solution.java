@@ -3,19 +3,21 @@ import java.util.Arrays;
 /**
  * Class for solution.
  */
-public class Solution{
-
-    private Solution(){
+public final class Solution{
+    /**
+     * Constructs the object.
+     */
+    private Solution() {
         /**
          * it is counstructor.
          */
     }
     /**.
-     * 
+     *
      *
      * @param      args  The arguments
      */
-    public static void main(String[] args) {
+    public static void main(final String[] args) {
         /**
          * It is the main method which converts the given input into
          *  the array objects and pass as parameters as for the sorting class.
@@ -26,9 +28,9 @@ public class Solution{
         while (sc.hasNext()) {
             sb.append(sc.nextLine() + "::");
         }
-        String [] lines = sb.toString().split("::");
+        String[] lines = sb.toString().split("::");
         int i = 0;
-        Team[] teams = new Team [lines.length];
+        Team[] teams = new Team[lines.length];
         for (String line : lines) {
             String[] tokens = line.split(",");
             Team team = new Team(tokens[0], Integer.parseInt(tokens[1]),
@@ -37,7 +39,7 @@ public class Solution{
         }
         Selection.sort(teams);
         String output  = Arrays.toString(teams);
-        output = output.replace("[","").replace("]","").replace(", ", ",");
+        output = output.replace("[", "").replace("]", "").replace(", ", ",");
         System.out.println(output);
     }
     /**By analaysis the complexity of the above method is O(N^2).**/
