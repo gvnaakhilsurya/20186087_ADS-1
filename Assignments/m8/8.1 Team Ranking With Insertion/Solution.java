@@ -9,7 +9,12 @@ public final class Solution {
      */
     private Solution() {
 
-    } 
+    }
+    /**
+     * { function_description }
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         /**.
          * It is the main method which converts the given input into
