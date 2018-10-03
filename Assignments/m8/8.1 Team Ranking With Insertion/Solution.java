@@ -3,8 +3,8 @@ import java.util.Arrays;
 /**.
  * Class for solution.
  */
-public class Solution{
-	/**.
+public final class Solution {
+	/**
 	 * \
 	 *
 	 * @param      args  The arguments
@@ -20,7 +20,7 @@ public class Solution{
 		while (sc.hasNext()) {
 			sb.append(sc.nextLine() + "::");
 	}
-		String []lines = sb.toString().split("::");
+		String[] lines = sb.toString().split("::");
 		int i = 0;
 		Team[] teams = new Team[lines.length];
 		for (String line : lines) {
@@ -33,7 +33,8 @@ public class Solution{
 	}
 		InsertionSort.sort(teams);
 		String output  = Arrays.toString(teams);
-		output = output.replace("[", "").replace("]", "").replace(", ", ",");
+		output =
+		 output.replace("[", "").replace("]", "").replace(", ", ",");
 		System.out.println(output);
 	}
 	/**By analaysis the complexity of the above method is O(N^2).**/
