@@ -3,7 +3,7 @@ import java.util.Arrays;
 /**
  * Class for solution.
  */
-public final class Solution{
+public final class Solution {
     /**
      * Constructs the object.
      */
@@ -24,7 +24,7 @@ public final class Solution{
          */
         Scanner sc = new Scanner(System.in);
         StringBuffer sb = new StringBuffer();
-        final int THREE = 3;
+        final int p = 3;
         while (sc.hasNext()) {
             sb.append(sc.nextLine() + "::");
         }
@@ -34,7 +34,7 @@ public final class Solution{
         for (String line : lines) {
             String[] tokens = line.split(",");
             Team team = new Team(tokens[0], Integer.parseInt(tokens[1]),
-             Integer.parseInt(tokens[2]), Integer.parseInt(tokens[THREE]));
+             Integer.parseInt(tokens[2]), Integer.parseInt(tokens[p]));
             teams[i++] = team;
         }
         Selection.sort(teams);
