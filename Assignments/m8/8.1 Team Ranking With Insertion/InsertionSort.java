@@ -18,7 +18,7 @@ public class InsertionSort {
 		}
 	}
 
-	/** By analaysis the complexity of the above method is O(N^2log(N)).
+	/** By analaysis the complexity of the above method is O(N^2).
 	/**.
 	 *It is an method   for to compare the two objects of the
 	 *comparable type.  
