@@ -25,7 +25,7 @@ Scanner sc = new Scanner(System.in);
 int inputs = sc.nextInt();
 int[]numarry = new int[inputs];
 for (int i = 0; i < inputs; i++) {
-	numarry[i] = sc.nextInt();
+numarry[i] = sc.nextInt();
 }
 Arrays.sort(numarry);
 int count = 0;
