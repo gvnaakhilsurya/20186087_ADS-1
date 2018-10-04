@@ -13,11 +13,11 @@ for (int i = 0 ;i<inputs;i++) {
 	numarry[i] = sc.nextInt();
 }
 Arrays.sort(numarry);
-boolean result;
 int count = 0;
 for (int i = 0;i < inputs;i++) {
-	for (int j = i;j < inputs ;j++) {
-		if(Arrays.binarySearch(numarry, -(numarry[i] + numarry[j])) >= 0) {
+	for (int j = i+1 ;j < inputs ;j++) {
+		int k = Arrays.binarySearch(numarry, -(numarry[i] + numarry[j]));
+		if(k > j) {
 			count++;
 		}
 	}	
