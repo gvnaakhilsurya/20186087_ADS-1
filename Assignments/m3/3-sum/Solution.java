@@ -17,42 +17,37 @@ boolean result;
 int count = 0;
 for (int i = 0;i < inputs;i++) {
 	for (int j = i;j < inputs ;j++) {
-		int low = j+1;
-		int high = inputs-1;
-		result = search(low,high,numarry, -(numarry[i] + numarry[j]));
-		if (result) {
+		if(Arrays.binarySearch(numarry, -(numarry[i] + numarry[j])) >= 0) {
 			count++;
-				
-		}	
+		}
 	}	
 }
  System.out.println(count);
 
 }
-
-
-public static boolean search(final int low, final int high,
-    final int[] b, final int s) {
-
-int midnum = 0;
-int count = 0;
-int lownum = low;
-int highnum = high;
-int[]numarry = b;
-int search = s;
-while(lownum <=highnum){
-	midnum = (lownum + highnum)/2;
-	if (search == numarry[midnum]) {
-		return true;
-	} else if(numarry[midnum]>search){
-		highnum = midnum -1;	
-	} else{
-		lownum = midnum + 1;
-	}
-
-	}
-	return false;
-
 }
-}
+
+
+// public static boolean search(final int low, final int high,
+//     final int[] b, final int s) {
+
+// int midnum = 0;
+// int count = 0;
+// int lownum = low;
+// int highnum = high;
+// while(lownum <=highnum){
+// 	midnum = (lownum + highnum)/2;
+// 	if (search == numarry[midnum]) {
+// 		return true;
+// 	} else if(numarry[midnum]>search){
+// 		highnum = midnum -1;	
+// 	} else{
+// 		lownum = midnum + 1;
+// 	}
+
+// 	}
+// 	return false;
+
+// }
+// }
 
