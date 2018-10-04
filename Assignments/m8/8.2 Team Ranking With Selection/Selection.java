@@ -1,4 +1,8 @@
-//import java.lang.Comparable;
+/**
+ * Class for selection.
+ * This class is for the Selection sort algoritham.
+ */
+
 class Selection{
 	/**.
 	 * 
@@ -7,7 +11,8 @@ class Selection{
 	 */
 	public static void sort(Comparable[]a){
 		/**
-		 * 
+		 * This method is for sorting the array of elements of the which is
+		 * of the Comparable type.
 		 */
 		int n = a.length;
 		for (int i = 0;i<n;i++) {
@@ -19,11 +24,13 @@ class Selection{
 			}
 		exch(a, i, min);	
 		}
-		/**By analaysis the complexity of the above method is O(N^2Log(N)).**/
+		/**By analaysis the complexity of the above method is O(N^2).**/
 		
 	}
 	/**.
-	 * 
+	 *This method is for comparing the two comparable type
+	 *elements and checks the differences b/w two elements
+	 which are places in the correct place on the sorted order.
 	 *
 	 * @param      v    comparable type 
 	 * @param      w   comparable type  
