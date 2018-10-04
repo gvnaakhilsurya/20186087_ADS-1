@@ -16,10 +16,10 @@ private Solution() {
  * @param      args  The arguments
  */
 public static void main(final String[] args) {
-	/**.
-	 * This method which delals with the main
-	 * method of the three sum.
-	 */
+/**.
+* This method which delals with the main
+* method of the three sum.
+*/
 
 Scanner sc = new Scanner(System.in);
 int inputs = sc.nextInt();
