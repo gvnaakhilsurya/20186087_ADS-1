@@ -1,59 +1,58 @@
 import java.util.Scanner;
 import java.util.Arrays;
-/**
- *Solution class.
- **/
-public final class Solution {
-    /**
-     *Class.
-     **/
-    private Solution() {
+class Solution{
+Solution(){
 
-    }
+}
+public static void main(String[] args) {
 
-/**
- * @brief The main method does the conversion of input
- * into the integer array and does the binary search operation and
- * finds whether the sum of  given three numbers are
- * equal to be zero or not.It returns the boolen data whether it is
- * corect or not.
- * @details [long description]
- *
- * @param args string
- */
- public static void main(final String[] args) {
-    /**
-     * It is the main method which does the operation of the
-     * given input into the integer array and does the binary search.
-     */
+Scanner sc = new Scanner(System.in);
+int inputs = sc.nextInt();
+int[]numarry = new int[inputs];
+for (int i = 0 ;i<inputs;i++) {
+	numarry[i] = sc.nextInt();
+}
+Arrays.sort(numarry);
+boolean result;
+int count = 0;
+for (int i = 0;i < inputs;i++) {
+	for (int j = i;j < inputs ;j++) {
+		int low = j+1;
+		int high = inputs-1;
+		result = search(low,high,numarry, -(numarry[i] + numarry[j]));
+		if (result) {
+			count++;
+				
+		}	
+	}	
+}
+ System.out.println(count);
+
+}
 
 
-        Scanner scan = new Scanner(System.in);
-        int arraysize = scan.nextInt();
-        int[] array = new int[arraysize];
-        int count = 0;
-        for (int i = 0; i < arraysize; i++) {
-            array[i] = scan.nextInt();
-        }
-        Arrays.sort(array);
-        int j = 0;
-        int k = 0;
-        for (int i = 0; i < arraysize; i++) {
-            j = i + 1;
-            k = arraysize - 1;
-            while (j < k) {
-                if (array[i] + array[j] + array[k] < 0) {
-                    j += 1;
-                } else if (array[i] + array[j] + array[k] > 0) {
-                    k -= 1;
-                } else {
-                    j += 1;
-                    k -= 1;
-                    count += 1;
-                }
-            }
-        }
-        System.out.println(count);
-    }
+public static boolean search(final int low, final int high,
+    final int[] b, final int s) {
+
+int midnum = 0;
+int count = 0;
+int lownum = low;
+int highnum = high;
+int[]numarry = b;
+int search = s;
+while(lownum <=highnum){
+	midnum = (lownum + highnum)/2;
+	if (search == numarry[midnum]) {
+		return true;
+	} else if(numarry[midnum]>search){
+		highnum = midnum -1;	
+	} else{
+		lownum = midnum + 1;
+	}
+
+	}
+	return false;
+
+}
 }
 
