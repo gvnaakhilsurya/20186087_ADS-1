@@ -1,10 +1,22 @@
 import java.util.Scanner;
 import java.util.Arrays;
-class Solution{
-Solution(){
+class Solution {
+	/**
+	 * Constructs the object.
+	 */
+Solution() {
 
 }
+/**
+ * { function_description }
+ *
+ * @param      args  The arguments
+ */
 public static void main(String[] args) {
+	/**
+	 * This method which delals with the main
+	 * method of the three sum.
+	 */
 
 Scanner sc = new Scanner(System.in);
 int inputs = sc.nextInt();
@@ -26,28 +38,4 @@ for (int i = 0;i < inputs;i++) {
 
 }
 }
-
-
-// public static boolean search(final int low, final int high,
-//     final int[] b, final int s) {
-
-// int midnum = 0;
-// int count = 0;
-// int lownum = low;
-// int highnum = high;
-// while(lownum <=highnum){
-// 	midnum = (lownum + highnum)/2;
-// 	if (search == numarry[midnum]) {
-// 		return true;
-// 	} else if(numarry[midnum]>search){
-// 		highnum = midnum -1;	
-// 	} else{
-// 		lownum = midnum + 1;
-// 	}
-
-// 	}
-// 	return false;
-
-// }
-// }
 
