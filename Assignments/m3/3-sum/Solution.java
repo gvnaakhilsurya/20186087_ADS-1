@@ -30,13 +30,13 @@ numarry[i] = sc.nextInt();
 Arrays.sort(numarry);
 int count = 0;
 for (int i = 0; i < inputs; i++) {
-	for (int j = i + 1; j < inputs; j++) {
-		int k = Arrays.binarySearch(numarry,
-		 -(numarry[i] + numarry[j]));
-		if (k > j) {
-			count++;
-		}
-	}
+    for (int j = i + 1; j < inputs; j++) {
+        int k = Arrays.binarySearch(numarry,
+         -(numarry[i] + numarry[j]));
+        if (k > j) {
+            count++;
+        }
+    }
 }
  System.out.println(count);
 }
