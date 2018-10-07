@@ -1,0 +1,56 @@
+Give traces by showing how the keys E A S Y Q U E S T I O N are sorted with TOP-DOWN mergesort.
+
+Given input is a = [E A S Y Q U E S T I O N]
+
+Top Down Merge Sort:
+
+First it is divided by taking the length of array and this process will occur recursively.
+
+
+						0	1	2	3	4	5   	6	7	8	9	10	11
+
+						[E 	A 	S 	Y 	Q 	U]	    [E 	S 	T 	I 	O 	 N]
+
+						[E 	A 	S]  	[Y 	Q 	U]	    [E 	S 	T]  	[I 	 O 	 N]
+
+						[E 	A] 	[S]  	[Y 	Q] 	[U]	    [E 	S] 	[T]  	[I 	 O]  [N]
+
+						[E] 	[A] 	[S]  	[Y]	[Q] 	[U]	    [E] 	[S] 	[T]  	[I] 	 [O]  [N]
+
+After dividing the merging process takes place as follows,
+
+								
+merge(a, 0, 0, 1)		[A,E] [S]
+
+merge(a, 0, 0, 1)						[U,Y] [Q]
+
+merge(a, 0, 1, 2)		[A,E,S]
+
+merge(a, 3, 4, 5)						[Q,U,Y]
+
+merge(a, 0, 2, 5)		[A,E,Q,S,U,Y]			
+
+merge(a, 6, 6, 7)								  [E,S]  [T]
+
+merge(a, 9, 9, 10)													[I,O] [N]
+
+merge(a, 6, 7, 8)									[E,S,T]
+                        
+merge(a, 9, 10, 11)										     [I,N,O]
+
+merge(a, 6, 8, 11)									[E,I,N,O,S,T]
+
+merge(a, 0, 5, 11)	[A   E  E  I  N  O  Q  S  S  T  U  Y]			
+
+
+
+
+
+
+
+
+
+
+
+ 
+
