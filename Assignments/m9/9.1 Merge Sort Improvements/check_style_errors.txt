@@ -1,0 +1,8 @@
+Starting audit...
+[ERROR] H:\20186087_ADS-1\Assignments\m9\9.1 Merge Sort Improvements\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] H:\20186087_ADS-1\Assignments\m9\9.1 Merge Sort Improvements\Solution.java:2: Missing a Javadoc comment. [JavadocType]
+[ERROR] H:\20186087_ADS-1\Assignments\m9\9.1 Merge Sort Improvements\Solution.java:2:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] H:\20186087_ADS-1\Assignments\m9\9.1 Merge Sort Improvements\Solution.java:3:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] H:\20186087_ADS-1\Assignments\m9\9.1 Merge Sort Improvements\Solution.java:3:29: Parameter args should be final. [FinalParameters]
+Audit done.
+Checkstyle ends with 5 errors.
