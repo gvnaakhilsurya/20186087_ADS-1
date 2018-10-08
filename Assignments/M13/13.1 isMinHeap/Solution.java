@@ -15,7 +15,6 @@ public final  class Solution {
      * It is the main method in this method,in this we can
      * take the input from the user and convert in to the array of
      * the eelements depends upon the various data types.
-     * 
      * By the analysis the complexity of the method is O(N^2).
      *
      * @param      args  The arguments
