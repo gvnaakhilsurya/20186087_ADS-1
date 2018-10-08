@@ -1,47 +1,38 @@
 import java.util.Scanner;
+
 /**
  * Class for solution.
  */
-class Solution {
-	/**
-	 * Constructs the object.
-	 */
-	Solution() {
-		/**
-		 * { item_description }
-		 */
+public final class Solution {
 
-	}
 	/**
-	 * { function_description }
+	 * { function_description }.
 	 *
 	 * @param      args  The arguments
 	 */
-	public static void main(String[] args) {
-		Scanner sc = new Scanner(System.in);
-		String testcasesno = sc.nextLine();
-		while(sc.hasNext()) {
-			String[] line = sc.nextLine().split(",");
+	public static void main(final String[] args) {
+		Scanner ip = new Scanner(System.in);
+		String testcases = ip.nextLine();
+		while (ip.hasNext()) {
+			String[] line = ip.nextLine().split(" ");
 			int people = Integer.parseInt(line[0]);
 			int gap = Integer.parseInt(line[1]);
-			Deque<Integer>dq = new Deque();
-			createcircle(dq,people);
-			dq.josephus(people,gap);
+			Deque<Integer> q = new Deque<>();
+			createCircle(q, people);
+			q.josephus(people, gap);
 		}
-
 	}
+
 	/**
-	 * { function_description }
+	 * Creates a circle.
 	 *
-	 * @param      dq      { parameter_description }
+	 * @param      q       The quarter
 	 * @param      people  The people
 	 */
-	public static void createcircle(Deque<Integer> dq, int people) {
+	public static void createCircle(final Deque<Integer> q,
+	 final int people) {
 		for (int i = 0; i < people; i++) {
-			dq.push(i);
-			
+			q.push(i);
 		}
-		
 	}
-
 }
