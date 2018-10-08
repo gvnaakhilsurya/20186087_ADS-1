@@ -62,7 +62,12 @@ public final  class Solution {
             Float[] floattokens = new Float[tokens.length];
             for (int i = 0; i < tokens.length; i++) {
                 floattokens[i] = Float.parseFloat(tokens[i]);
+                if (floattokens[i] < 0) {
+                    System.out.println(false);
+                    
+                }
             }
+
             MinHeap min = new MinHeap(floattokens);
             System.out.println(min.IsMinHeap());
             n--;
