@@ -31,7 +31,7 @@ public final  class Solution {
 			 * executes. 
 			 */
 			case "String":
-			while(n > 0) {
+			while (n > 0) {
 				String[] tokens = sc.nextLine().split(",");
 				MinHeap min = new MinHeap(tokens);
 				System.out.println(min.IsMinHeap());
@@ -43,7 +43,7 @@ public final  class Solution {
 			 * executes.
 			 */
 			case "Integer":
-			while(n > 0) {
+			while (n > 0) {
 			String[] tokens = sc.nextLine().split(",");
 			Integer[] inttokens = new Integer[tokens.length];
 			for (int i = 0; i < tokens.length; i++) {
@@ -59,7 +59,7 @@ public final  class Solution {
 			 * executes.
 			 */
 			case "Float":
-			while(n > 0) {
+			while (n > 0) {
 			String[] tokens = sc.nextLine().split(",");
 			Float[] floattokens = new Float[tokens.length];
 			for (int i = 0; i < tokens.length; i++) {
@@ -78,7 +78,7 @@ public final  class Solution {
 		 */
 
 		case "Double":
-			while(n > 0) {
+			while (n > 0) {
 			String[] tokens = sc.nextLine().split(",");
 			Double[] doubletokens = new Double[tokens.length];
 			for (int i = 0; i < tokens.length; i++) {
@@ -91,16 +91,10 @@ public final  class Solution {
 		break;
 		default:
 		break;
-
-}	}
-
-    
-
-
-	
-
-
-    
+        }
+	    
+	}
 }
+
 		
 	
