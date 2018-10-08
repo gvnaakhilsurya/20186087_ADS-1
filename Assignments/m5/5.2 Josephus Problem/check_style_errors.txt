@@ -1,0 +1,17 @@
+Starting audit...
+[ERROR] H:\20186087_ADS-1\Assignments\m5\5.2 Josephus Problem\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] H:\20186087_ADS-1\Assignments\m5\5.2 Josephus Problem\Solution.java:5:1: Utility classes should not have a public or default constructor. [HideUtilityClassConstructor]
+[ERROR] H:\20186087_ADS-1\Assignments\m5\5.2 Josephus Problem\Solution.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
+[ERROR] H:\20186087_ADS-1\Assignments\m5\5.2 Josephus Problem\Solution.java:15: First sentence should end with a period. [JavadocStyle]
+[ERROR] H:\20186087_ADS-1\Assignments\m5\5.2 Josephus Problem\Solution.java:20:33: Parameter args should be final. [FinalParameters]
+[ERROR] H:\20186087_ADS-1\Assignments\m5\5.2 Josephus Problem\Solution.java:23:22: 'while' is not followed by whitespace. [WhitespaceAround]
+[ERROR] H:\20186087_ADS-1\Assignments\m5\5.2 Josephus Problem\Solution.java:27:39: '>' is followed by an illegal character. [GenericWhitespace]
+[ERROR] H:\20186087_ADS-1\Assignments\m5\5.2 Josephus Problem\Solution.java:28:41: ',' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] H:\20186087_ADS-1\Assignments\m5\5.2 Josephus Problem\Solution.java:29:44: ',' is not followed by whitespace. [WhitespaceAfter]
+[ERROR] H:\20186087_ADS-1\Assignments\m5\5.2 Josephus Problem\Solution.java:33: First sentence should end with a period. [JavadocStyle]
+[ERROR] H:\20186087_ADS-1\Assignments\m5\5.2 Josephus Problem\Solution.java:39:41: Parameter dq should be final. [FinalParameters]
+[ERROR] H:\20186087_ADS-1\Assignments\m5\5.2 Josephus Problem\Solution.java:39:60: Parameter people should be final. [FinalParameters]
+[ERROR] H:\20186087_ADS-1\Assignments\m5\5.2 Josephus Problem\Solution.java:42: Line has trailing spaces. [RegexpSingleline]
+[ERROR] H:\20186087_ADS-1\Assignments\m5\5.2 Josephus Problem\Solution.java:44: Line has trailing spaces. [RegexpSingleline]
+Audit done.
+Checkstyle ends with 14 errors.
