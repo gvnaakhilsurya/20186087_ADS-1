@@ -48,6 +48,9 @@ public class Solution {
      * @param      args  The arguments
      */
     public static void main(String[] args) {
+        /**.
+         * { var_description }
+         */
         Scanner sc = new Scanner(System.in);
         String input = sc.nextLine();
         String p = sc.nextLine();
