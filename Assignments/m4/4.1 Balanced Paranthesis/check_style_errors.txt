@@ -1,0 +1,10 @@
+Starting audit...
+[ERROR] H:\20186087_ADS-1\Assignments\m4\4.1 Balanced Paranthesis\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] H:\20186087_ADS-1\Assignments\m4\4.1 Balanced Paranthesis\Solution.java:61: Line has trailing spaces. [RegexpSingleline]
+[ERROR] H:\20186087_ADS-1\Assignments\m4\4.1 Balanced Paranthesis\Solution.java:84: Line has trailing spaces. [RegexpSingleline]
+[ERROR] H:\20186087_ADS-1\Assignments\m4\4.1 Balanced Paranthesis\Solution.java:104: Line has trailing spaces. [RegexpSingleline]
+[ERROR] H:\20186087_ADS-1\Assignments\m4\4.1 Balanced Paranthesis\Solution.java:108: Line is longer than 80 characters (found 82). [LineLength]
+[ERROR] H:\20186087_ADS-1\Assignments\m4\4.1 Balanced Paranthesis\Solution.java:111:27: Name 'Isparnthesisbalanced' must match pattern '^[a-z][a-zA-Z0-9]*$'. [MethodName]
+[ERROR] H:\20186087_ADS-1\Assignments\m4\4.1 Balanced Paranthesis\Solution.java:113: Line has trailing spaces. [RegexpSingleline]
+Audit done.
+Checkstyle ends with 7 errors.

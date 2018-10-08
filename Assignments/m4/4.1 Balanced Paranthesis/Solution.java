@@ -93,7 +93,7 @@ public final class Solution {
         int k = Integer.parseInt(scan.nextLine());
         for (int i = 0; i < k; i++) {
             String s = scan.next();
-            if (theparantheses(s)) {
+            if (Isparnthesisbalanced(s)) {
                 System.out.println("YES");
             } else {
                 System.out.println("NO");
@@ -108,7 +108,7 @@ public final class Solution {
      * @return     It returns the boolean value whether the chr is present in data
      * or not.
      */
-    public static boolean theparantheses(final String s) {
+    public static boolean Isparnthesisbalanced(final String s) {
         /**
          * It is the function,which checks whether the char is present in the 
          * String or not.
