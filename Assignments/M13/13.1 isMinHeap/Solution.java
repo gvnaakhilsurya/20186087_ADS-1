@@ -62,9 +62,9 @@ public final  class Solution {
                 if (input.equals("")) {
                     System.out.println(false);
                     break;
-                }
+                } else {
 
-            String[] tokens = sc.nextLine().split(",");
+            String[] tokens = input.split(",");
             Float[] floattokens = new Float[tokens.length];
             // if (n !=tokens.length) {
             //     System.out.println(false);
@@ -78,6 +78,7 @@ public final  class Solution {
             System.out.println(min.IsMinHeap());
             n--;
         }
+    }
         break;
         /**
          *
