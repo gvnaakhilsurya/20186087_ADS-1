@@ -68,7 +68,6 @@ public final  class Solution {
             Float[] floattokens = new Float[tokens.length];
             // if (n !=tokens.length) {
             //     System.out.println(false);
-                
             // }
             for (int i = 0; i < tokens.length; i++) {
                 floattokens[i] = Float.parseFloat(tokens[i]);
