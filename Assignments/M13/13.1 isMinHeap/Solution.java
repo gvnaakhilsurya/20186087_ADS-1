@@ -58,14 +58,20 @@ public final  class Solution {
              */
             case "Float":
             while (n > 0) {
+                String input = sc.nextLine();
+                if (input.equals("")) {
+                    System.out.println(false);
+                    break;
+                }
+
             String[] tokens = sc.nextLine().split(",");
             Float[] floattokens = new Float[tokens.length];
+            // if (n !=tokens.length) {
+            //     System.out.println(false);
+                
+            // }
             for (int i = 0; i < tokens.length; i++) {
                 floattokens[i] = Float.parseFloat(tokens[i]);
-                if (floattokens[i] < 0) {
-                    System.out.println(false);
-                    
-                }
             }
 
             MinHeap min = new MinHeap(floattokens);
