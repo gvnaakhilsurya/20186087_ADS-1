@@ -1,5 +1,3 @@
-
-
 public class Taxicab implements Comparable<Taxicab> {
     int i;
     int j;
