@@ -1,0 +1,6 @@
+In this video,we learn about the binary search operation of the ordered tree.We know that if we want the minimum we moves left from the root and if we want maximum we move right from the root.In this we learn about the two important conncepts called the floor and ceil methods.The rank method and put and get methods are brieffly explained in the viedo.
+
+23-10-2018
+
+
+1. In this viedo we learn how to delete an key value pair from the symbol table.The deletion method was proposed by the hibbard at 50 years ago.We are following the same method.Here we have three cass.Case 1 is a parent with no children then we can make that node to null.Case 2 is parent with one child in this we can make the child link as  updated and make the parent link as null.The case 3 is pretty difficult first we wanna search  the min or  max element according to key given,and then if it is min or max search the sucessive min or max on the side present on the side of the tree.Then update the count value and then make the min or max node to null.This takes the Squrt(N) complexity operations.We can find the better one in the following methods. 
