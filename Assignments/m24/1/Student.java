@@ -6,7 +6,13 @@ class Student {
 	 * { var_description }
 	 */
 	private int rollno;
+	/**
+	 * { var_description }
+	 */
 	private String name;
+	/**
+	 * { var_description }
+	 */
 	private double totalmarks;
 	/**
 	 * Constructs the object.
