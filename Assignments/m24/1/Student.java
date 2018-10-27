@@ -2,6 +2,9 @@
  * Class for student.
  */
 class Student {
+	/**
+	 * { var_description }
+	 */
 	private int rollno;
 	private String name;
 	private double totalmarks;
@@ -12,7 +15,7 @@ class Student {
 	 * @param      name        The name
 	 * @param      totalmarks  The totalmarks
 	 */
-	Student(int rollno, String name, double totalmarks) {
+	Student(final int rollno, final String name, final double totalmarks) {
 		this.rollno = rollno;
 		this.name = name;
 		this.totalmarks = totalmarks;
@@ -23,7 +26,7 @@ class Student {
 	 * @param      name        The name
 	 * @param      totalmarks  The totalmarks
 	 */
-	Student(String name, double totalmarks) {
+	Student(final String name, final double totalmarks) {
 		this.name = name;
 		this.totalmarks = totalmarks;
 	}
@@ -32,7 +35,7 @@ class Student {
 	 *
 	 * @return     The rollno.
 	 */
-	 public int getRollno(){
+	 public int getRollno() {
 	  return rollno;
 	 }
 	 /**
@@ -40,7 +43,7 @@ class Student {
 	  *
 	  * @param      rollno  The rollno
 	  */
-	public void setRollno(int rollno){
+	public void setRollno(int rollno) {
 	  this.rollno = rollno;
 	}
 	/**
@@ -48,7 +51,7 @@ class Student {
 	 *
 	 * @return     The name.
 	 */
-	 public String getName(){
+	 public String getName() {
 	  return name;
 	}
 	/**
@@ -56,7 +59,7 @@ class Student {
 	 *
 	 * @param      name  The name
 	 */
-	public void setName(String name){
+	public void setName(String name) {
 	  this.name = name;
 	}
 	/**
@@ -64,7 +67,7 @@ class Student {
 	 *
 	 * @return     The totalmarks.
 	 */
-	public Double getTotalmarks(){
+	public Double getTotalmarks() {
 	   return totalmarks;
 	}
 	/**
@@ -72,7 +75,7 @@ class Student {
 	 *
 	 * @param      totalmarks  The totalmarks
 	 */
-	public void setTotalmarks(Double totalmarks){
+	public void setTotalmarks(Double totalmarks) {
 	   this.totalmarks = totalmarks;
 	}
 
