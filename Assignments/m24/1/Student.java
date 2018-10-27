@@ -2,7 +2,7 @@
  * Class for student.
  */
 class Student {
-	/**.
+/**.
 	 * rool no
 	 */
 	private int rollno;
