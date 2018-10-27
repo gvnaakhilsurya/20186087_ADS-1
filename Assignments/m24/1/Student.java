@@ -3,18 +3,18 @@
  */
 class Student {
 	/**.
-	 * { var_description }
+	 * rool no
 	 */
 	private int rollno;
-	/**
-	 * { var_description }
+	/**.
+	 * name of student.
 	 */
 	private String name;
-	/**
-	 * { var_description }
+	/**.
+	 * 
 	 */
 	private double totalmarks;
-	/**
+	/**.
 	 * Constructs the object.
 	 *
 	 * @param      rollno      The rollno
@@ -26,7 +26,7 @@ class Student {
 		this.name = name;
 		this.totalmarks = totalmarks;
 	}
-	/**
+	/**.
 	 * Constructs the object.
 	 *
 	 * @param      name        The name
@@ -36,7 +36,7 @@ class Student {
 		this.name = name;
 		this.totalmarks = totalmarks;
 	}
-	/**
+	/**.
 	 * Gets the rollno.
 	 *
 	 * @return     The rollno.
@@ -44,7 +44,7 @@ class Student {
 	 public int getRollno() {
 	  return rollno;
 	 }
-	 /**
+	 /**.
 	  * Sets the rollno.
 	  *
 	  * @param      rollno  The rollno
@@ -52,7 +52,7 @@ class Student {
 	public void setRollno(final int rollno) {
 	  this.rollno = rollno;
 	}
-	/**
+	/**.
 	 * Gets the name.
 	 *
 	 * @return     The name.
@@ -60,7 +60,7 @@ class Student {
 	 public String getName() {
 	  return name;
 	}
-	/**
+	/**.
 	 * Sets the name.
 	 *
 	 * @param      name  The name
