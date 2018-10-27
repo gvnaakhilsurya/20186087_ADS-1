@@ -9,7 +9,7 @@ class Student {
      */
     private String name;
     /**.
-     *
+     *total marks
      */
     private double totalmarks;
     /**.
@@ -39,8 +39,8 @@ class Student {
      *
      * @return     The rollno.
      */
-     public int getRollno() {
-      return rollno;
+    public int getRollno() {
+    return rollno;
      }
      /**.
       * Sets the rollno.
