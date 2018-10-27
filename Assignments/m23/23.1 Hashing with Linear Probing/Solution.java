@@ -1,43 +1,48 @@
+/**.
+ * imports Scanner package
+ */
 import java.util.Scanner;
-class Solution {
+/**.
+ * class for Solution
+ */
+public final class Solution {
+    /**.
+     * Constructs the object for Solution class.
+     */
     private Solution() {
 
     }
-    public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
-        LinearProbingHashST<String, Integer> lpst = new LinearProbingHashST<String, Integer>();
-        int nopes = sc.nextInt();
-        System.out.println(nopes);
-        for (int i = 0; i < nopes; i++) {
-            String line = sc.nextLine();
-            String[]tokens = line.split(" ");
+    /**.
+     * demonstraters the operations of Linear probing hash Symbol table
+     *
+     * @param      args  The arguments
+     */
+    public static void main(final String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int operations = scan.nextInt();
+        //System.out.println(operations);
+        scan.nextLine();
+        LinearProbingHashST<String, Integer> hashst = new
+                       LinearProbingHashST<String, Integer>();
+        for (int i = 0; i < operations; i++) {
+            String[] tokens = scan.nextLine().split(" ");
             switch (tokens[0]) {
-                case "put":
-                    lpst.put(tokens[1],Integer.parseInt(tokens[2]));
-                    break;
-                case "get":
-                    System.out.println(lpst.get(tokens[1]));
+            case "put":
+                hashst.put(tokens[1], Integer.parseInt(tokens[2]));
                 break;
-                case "delete":
-                    lpst.delete(tokens[1]);
-                    break;
-                
-                case "display":
-                    try {
-                        lpst.display();
-                    } catch (Exception e) {
-                        System.out.println("{}");
-                    }
+            case "get":
+                System.out.println(hashst.get(tokens[1]));
                 break;
-                default:
+            case "delete":
+                hashst.delete(tokens[1]);
+                break;
+            case "display":
+                hashst.display();
+                break;
+            default:
                 break;
             }
-
         }
-
     }
-
 }
 
-
-                
