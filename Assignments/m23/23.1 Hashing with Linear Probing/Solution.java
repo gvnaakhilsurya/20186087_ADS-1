@@ -18,14 +18,14 @@ public final class Solution {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int operations = scan.nextInt();
+        Scanner sc = new Scanner(System.in);
+        int operations = sc.nextInt();
         //System.out.println(operations);
-        scan.nextLine();
+        sc.nextLine();
         LinearProbingHashST<String, Integer> hashst = new
                        LinearProbingHashST<String, Integer>();
         for (int i = 0; i < operations; i++) {
-            String[] tokens = scan.nextLine().split(" ");
+            String[] tokens = sc.nextLine().split(" ");
             switch (tokens[0]) {
             case "put":
                 hashst.put(tokens[1], Integer.parseInt(tokens[2]));
