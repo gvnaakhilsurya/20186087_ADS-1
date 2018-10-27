@@ -1,13 +1,14 @@
 Starting audit...
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:6:1: File contains tab characters (this is the first instance). [FileTabCharacter]
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:14: Line has trailing spaces. [RegexpSingleline]
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:24:27: 'rollno' hides a field. [HiddenField]
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:24:48: 'name' hides a field. [HiddenField]
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:24:67: 'totalmarks' hides a field. [HiddenField]
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:35:30: 'name' hides a field. [HiddenField]
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:35:49: 'totalmarks' hides a field. [HiddenField]
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:52:41: 'rollno' hides a field. [HiddenField]
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:68:42: 'name' hides a field. [HiddenField]
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:84:48: 'totalmarks' hides a field. [HiddenField]
+[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:0: File does not end with a newline. [NewlineAtEndOfFile]
+[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:5: Line has trailing spaces. [RegexpSingleline]
+[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:6:5: Missing a Javadoc comment. [JavadocVariable]
+[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:22:23: 'rollno' hides a field. [HiddenField]
+[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:22:44: 'name' hides a field. [HiddenField]
+[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:22:63: 'totalmarks' hides a field. [HiddenField]
+[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:33:26: 'name' hides a field. [HiddenField]
+[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:33:45: 'totalmarks' hides a field. [HiddenField]
+[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:50:37: 'rollno' hides a field. [HiddenField]
+[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:66:38: 'name' hides a field. [HiddenField]
+[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:82:44: 'totalmarks' hides a field. [HiddenField]
 Audit done.
-Checkstyle ends with 10 errors.
+Checkstyle ends with 11 errors.
