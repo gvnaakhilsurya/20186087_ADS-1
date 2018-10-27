@@ -1,8 +1,8 @@
-/**
+/**.
  * Class for student.
  */
 class Student {
-	/**
+	/**.
 	 * { var_description }
 	 */
 	private int rollno;
@@ -43,7 +43,7 @@ class Student {
 	  *
 	  * @param      rollno  The rollno
 	  */
-	public void setRollno(int rollno) {
+	public void setRollno(final int rollno) {
 	  this.rollno = rollno;
 	}
 	/**
@@ -59,7 +59,7 @@ class Student {
 	 *
 	 * @param      name  The name
 	 */
-	public void setName(String name) {
+	public void setName(final String name) {
 	  this.name = name;
 	}
 	/**
@@ -75,7 +75,7 @@ class Student {
 	 *
 	 * @param      totalmarks  The totalmarks
 	 */
-	public void setTotalmarks(Double totalmarks) {
+	public void setTotalmarks(final Double totalmarks) {
 	   this.totalmarks = totalmarks;
 	}
 

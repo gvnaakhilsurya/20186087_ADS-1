@@ -1,6 +1,5 @@
 Starting audit...
 [ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:5: First sentence should end with a period. [JavadocStyle]
 [ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:5:1: File contains tab characters (this is the first instance). [FileTabCharacter]
 [ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:9:9: Missing a Javadoc comment. [JavadocVariable]
 [ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:10:9: Missing a Javadoc comment. [JavadocVariable]
@@ -9,11 +8,8 @@ Starting audit...
 [ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:18:67: 'totalmarks' hides a field. [HiddenField]
 [ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:29:30: 'name' hides a field. [HiddenField]
 [ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:29:49: 'totalmarks' hides a field. [HiddenField]
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:46:31: Parameter rollno should be final. [FinalParameters]
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:46:35: 'rollno' hides a field. [HiddenField]
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:62:29: Parameter name should be final. [FinalParameters]
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:62:36: 'name' hides a field. [HiddenField]
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:78:35: Parameter totalmarks should be final. [FinalParameters]
-[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:78:42: 'totalmarks' hides a field. [HiddenField]
+[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:46:41: 'rollno' hides a field. [HiddenField]
+[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:62:42: 'name' hides a field. [HiddenField]
+[ERROR] H:\20186087_ADS-1\Assignments\m24\1\Student.java:78:48: 'totalmarks' hides a field. [HiddenField]
 Audit done.
-Checkstyle ends with 16 errors.
+Checkstyle ends with 12 errors.
