@@ -17,10 +17,8 @@ public final class Solution {
      * to the various methods written in the Linked list class.
      *
      * @param      args  The arguments
-     * 
      * By analysis the order od complexity of the main method
      * is O(N).
-     * 
      */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
