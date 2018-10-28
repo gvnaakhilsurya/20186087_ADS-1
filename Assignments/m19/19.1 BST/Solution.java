@@ -15,7 +15,7 @@ public final class Solution {
     }
     /**.
      * In the main method we can take the input from the
-     * input files and divides and performs the BST operations. 
+     * input files and divides and performs the BST operations.
      *
      * @param      args  The arguments
      */
