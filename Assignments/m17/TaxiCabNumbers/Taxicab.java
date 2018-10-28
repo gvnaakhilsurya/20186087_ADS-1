@@ -1,31 +1,73 @@
+/**.
+ * Class for taxicab.
+ */
 public class Taxicab implements Comparable<Taxicab> {
-    private final int i;
-    private final int j;
-    private final long sum;   // i^3 + j^3, cached to avoid recomputation
-
-    // create a new tuple (i, j, i^3 + j^3)
-    public Taxicab(int i, int j) {
-        this.sum = (long) i*i*i + (long) j*j*j;
-        this.i = i;
-        this.j = j;
+    /**.
+     * integer i
+     */
+    private int i;
+    /**.
+     * integer type j
+     */
+    private int j;
+    /**.
+     * sum of long type
+     */
+    private long sum;
+    /**.
+     * Constructs the object for taxi cab
+     *
+     * @param      i1     { integer parameter }
+     * @param      j1     { integer parameter }
+     */
+    public Taxicab(final int i1, final int j1) {
+        this.sum = (long) (i1 * i1 * i1) + (j1 * j1 * j1);
+        this.i = i1;
+        this.j = j1;
     }
-
-    // compare by i^3 + j^3, breaking ties by i
-    public int compareTo(Taxicab that) {
-        if      (this.sum < that.sum) return -1;
-        else if (this.sum > that.sum) return +1;
-        else if (this.i < that.i)     return -1;
-        else if (this.i > that.i)     return +1;
-        else                          return  0;
+    /**.
+     * compares two objects
+     * Time complexity is 1 because each statement is executed only once.
+     * @param      that  The that
+     *
+     * @return     { returns 1 if this.sum > that.sum
+     * and this.i > that.i else returns -1}
+     */
+    public int compareTo(final Taxicab that) {
+        if (this.sum > that.sum) {
+            return +1;
+        }
+        if (this.sum < that.sum) {
+            return -1;
+        }
+        if (this.i > that.i) {
+            return +1;
+        }
+        if (this.i < that.i) {
+            return -1;
+        }
+        return 0;
     }
-
+    /**
+     * Returns a string representation of the object.
+     * TIme complexity is 1 as one statement is executed only once
+     * @return     String representation of the object.
+     */
     public String toString() {
-        return i + "^3 + " + j + "^3";
+        return sum + " = " + i + "^3 + " + j + "^3";
     }
 
-    public static long findTaxicab(int N, int M) {
+    /**.
+     * finds the taxi cab number
+     * Time complexity is N as for loop is executed for N times
+     * @param      n1     { number of occurance of the taxi cab number}
+     * @param      m1     { number of pairs that we needed}
+     *
+     * @return     { returns the taxicab number }
+     */
+    public static long findTaxicab(final int n1, final int m1) {
         MinPQ<Taxicab> minPQ = new MinPQ<Taxicab>();
-        int n = 600;
+        final int n = 600;
         int count = 0;
         long res = 0;
         for (int i = 1; i <= n; i++) {
@@ -39,10 +81,9 @@ public class Taxicab implements Comparable<Taxicab> {
             Taxicab curr = minPQ.delMin();
             if (prev.sum == curr.sum) {
                 run = run + 1;
-                // System.out.println(prev + " " + curr);
-                if (run == M) {
+                if (run == m1) {
                     count++;
-                    if (count == N) {
+                    if (count == n1) {
                         res = curr.sum;
                         break;
                     }
@@ -50,11 +91,11 @@ public class Taxicab implements Comparable<Taxicab> {
             } else {
                 run = 1;
             }
-            if (curr.j < n)
-                minPQ.insert(new Taxicab(curr.i, curr.j+1));
+            if (curr.j < n) {
+                minPQ.insert(new Taxicab(curr.i, curr.j + 1));
+            }
             prev = curr;
         }
         return res;
-        // System.out.println("Result is : " + res);
     }
 }
