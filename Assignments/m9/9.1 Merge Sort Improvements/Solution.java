@@ -1,5 +1,14 @@
 import java.util.Scanner;
-class Solution {
+/**
+ * { item_description }
+ */
+public final class Solution {
+    /**
+     * Constructs the object.
+     */
+    private  Solution() {
+
+    }
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNextLine()) {
