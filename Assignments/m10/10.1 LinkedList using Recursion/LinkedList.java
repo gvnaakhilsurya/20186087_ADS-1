@@ -19,12 +19,10 @@ public class LinkedList {
          * data.
          */
         private int data;
-
         /**
          * Node Link.
          */
         private Node Link;
-
         /**
          * Constructs the object.
          *

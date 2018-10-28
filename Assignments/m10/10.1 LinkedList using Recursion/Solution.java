@@ -11,9 +11,8 @@ public final class Solution {
     private Solution() {
 
     }
-    
     /**
-     * This is the main method in this method we takes the input 
+     * This is the main method in this method we takes the input
      * from the user and it splits in to the tokens and the passsed
      * to the various methods written in the Linked list class.
      *
