@@ -1,5 +1,4 @@
 
-
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 public class Queue<Item> implements Iterable<Item> {
@@ -24,6 +23,8 @@ public class Queue<Item> implements Iterable<Item> {
 
     /**
      * Returns true if this queue is empty.
+     * The time complexty of the follwing method is O(1).
+     * As each statment executes only once.
      *
      * @return {@code true} if this queue is empty; {@code false} otherwise
      */
@@ -33,56 +34,18 @@ public class Queue<Item> implements Iterable<Item> {
 
     /**
      * Returns the number of items in this queue.
+     * The time complexty of the follwing method is O(1).
+     * As each statment executes only once.
      *
      * @return the number of items in this queue
      */
     public int size() {
         return n;
     }
-
-    /**
-     * Returns the item least recently added to this queue.
-     *
-     * @return the item least recently added to this queue
-     * @throws NoSuchElementException if this queue is empty
-     */
-    public Item peek() {
-        if (isEmpty()) throw new NoSuchElementException("Queue underflow");
-        return first.item;
-    }
-
-    /**
-     * Adds the item to this queue.
-     *
-     * @param  item the item to add
-     */
-    public void enqueue(Item item) {
-        Node<Item> oldlast = last;
-        last = new Node<Item>();
-        last.item = item;
-        last.next = null;
-        if (isEmpty()) first = last;
-        else           oldlast.next = last;
-        n++;
-    }
-
-    /**
-     * Removes and returns the item on this queue that was least recently added.
-     *
-     * @return the item on this queue that was least recently added
-     * @throws NoSuchElementException if this queue is empty
-     */
-    public Item dequeue() {
-        if (isEmpty()) throw new NoSuchElementException("Queue underflow");
-        Item item = first.item;
-        first = first.next;
-        n--;
-        if (isEmpty()) last = null;   // to avoid loitering
-        return item;
-    }
-
     /**
      * Returns a string representation of this queue.
+     * The time complexty of the follwing method is O(N).
+     * As the loop iterates till the length of the item.
      *
      * @return the sequence of items in FIFO order, separated by spaces
      */
@@ -97,7 +60,9 @@ public class Queue<Item> implements Iterable<Item> {
 
     /**
      * Returns an iterator that iterates over the items in this queue in FIFO order.
-     *
+     * The time complexty of the follwing method is O(N).
+     * As the iterator class executes upto all the elements present in the queue.
+     * 
      * @return an iterator that iterates over the items in this queue in FIFO order
      */
     public Iterator<Item> iterator()  {

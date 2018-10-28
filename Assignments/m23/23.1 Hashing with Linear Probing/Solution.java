@@ -15,6 +15,8 @@ public final class Solution {
     }
     /**.
      * demonstraters the operations of Linear probing hash Symbol table
+     *The time complexty of the main method is O(N).
+     *As the for loop iteratres upto N value.
      *
      * @param      args  The arguments
      */
