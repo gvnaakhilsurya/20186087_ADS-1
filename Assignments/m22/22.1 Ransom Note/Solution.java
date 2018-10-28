@@ -15,7 +15,9 @@ public class Solution {
 	 * It is the min method which is used to
 	 * read the input from the files and the divided into the
 	 * tokens and pass as the arguments as the specified methods.
+	 * 
 	 * By the analysis the time complexity of the below method isO().
+	 * 
 	 * @param      args  The arguments
 	 */
 	public static void main(String[] args) {
