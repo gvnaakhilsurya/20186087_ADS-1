@@ -1,27 +1,28 @@
 public class Taxicab implements Comparable<Taxicab> {
-    int i;
-    int j;
-    long sum;
+    private final int i;
+    private final int j;
+    private final long sum;   // i^3 + j^3, cached to avoid recomputation
 
+    // create a new tuple (i, j, i^3 + j^3)
     public Taxicab(int i, int j) {
-        this.sum = (long)(i*i*i) + (j*j*j);
+        this.sum = (long) i*i*i + (long) j*j*j;
         this.i = i;
         this.j = j;
     }
 
+    // compare by i^3 + j^3, breaking ties by i
     public int compareTo(Taxicab that) {
-        if (this.sum > that.sum) return +1;
-        if (this.sum < that.sum) return -1;
-        if (this.i > that.i) return +1;
-        if (this.i < that.i) return -1;
-        return 0;
+        if      (this.sum < that.sum) return -1;
+        else if (this.sum > that.sum) return +1;
+        else if (this.i < that.i)     return -1;
+        else if (this.i > that.i)     return +1;
+        else                          return  0;
     }
 
     public String toString() {
-        return sum + " = " + i + "^3 + " + j + "^3";
+        return i + "^3 + " + j + "^3";
     }
 
-    // public static void main(String[] args) {
     public static long findTaxicab(int N, int M) {
         MinPQ<Taxicab> minPQ = new MinPQ<Taxicab>();
         int n = 600;
