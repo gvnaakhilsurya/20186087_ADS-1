@@ -1,6 +1,6 @@
 /**.
  * { imports Scanner package }
- * @author gvanakhilsurya 
+ * @author gvanakhilsurya
  */
 import java.util.Scanner;
 /**
