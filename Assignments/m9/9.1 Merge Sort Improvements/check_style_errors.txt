@@ -1,7 +1,6 @@
 Starting audit...
 [ERROR] H:\20186087_ADS-1\Assignments\m9\9.1 Merge Sort Improvements\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] H:\20186087_ADS-1\Assignments\m9\9.1 Merge Sort Improvements\Solution.java:2: First sentence should end with a period. [JavadocStyle]
-[ERROR] H:\20186087_ADS-1\Assignments\m9\9.1 Merge Sort Improvements\Solution.java:12:5: Missing a Javadoc comment. [JavadocMethod]
-[ERROR] H:\20186087_ADS-1\Assignments\m9\9.1 Merge Sort Improvements\Solution.java:12:29: Parameter args should be final. [FinalParameters]
+[ERROR] H:\20186087_ADS-1\Assignments\m9\9.1 Merge Sort Improvements\Solution.java:13:5: Missing a Javadoc comment. [JavadocMethod]
+[ERROR] H:\20186087_ADS-1\Assignments\m9\9.1 Merge Sort Improvements\Solution.java:13:29: Parameter args should be final. [FinalParameters]
 Audit done.
-Checkstyle ends with 4 errors.
+Checkstyle ends with 3 errors.
