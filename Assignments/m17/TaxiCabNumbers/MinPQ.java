@@ -1,49 +1,8 @@
 
-/******************************************************************************
- *  Compilation:  javac MinPQ.java
- *  Execution:    java MinPQ < input.txt
- *  Dependencies: StdIn.java StdOut.java
- *  Data files:   https://algs4.cs.princeton.edu/24pq/tinyPQ.txt
- *  
- *  Generic min priority queue implementation with a binary heap.
- *  Can be used with a comparator instead of the natural order.
- *
- *  % java MinPQ < tinyPQ.txt
- *  E A E (6 left on pq)
- *
- *  We use a one-based array to simplify parent and child calculations.
- *
- *  Can be optimized by replacing full exchanges with half exchanges
- *  (ala insertion sort).
- *
- ******************************************************************************/
-
 import java.util.Comparator;
 import java.util.Iterator;
 import java.util.NoSuchElementException;
 
-/**
- *  The {@code MinPQ} class represents a priority queue of generic keys.
- *  It supports the usual <em>insert</em> and <em>delete-the-minimum</em>
- *  operations, along with methods for peeking at the minimum key,
- *  testing if the priority queue is empty, and iterating through
- *  the keys.
- *  <p>
- *  This implementation uses a binary heap.
- *  The <em>insert</em> and <em>delete-the-minimum</em> operations take
- *  logarithmic amortized time.
- *  The <em>min</em>, <em>size</em>, and <em>is-empty</em> operations take constant time.
- *  Construction takes time proportional to the specified capacity or the number of
- *  items used to initialize the data structure.
- *  <p>
- *  For additional documentation, see <a href="https://algs4.cs.princeton.edu/24pq">Section 2.4</a> of
- *  <i>Algorithms, 4th Edition</i> by Robert Sedgewick and Kevin Wayne.
- *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
- *
- *  @param <Key> the generic type of key on this priority queue
- */
 public class MinPQ<Key> implements Iterable<Key> {
     private Key[] pq;                    // store items at indices 1 to n
     private int n;                       // number of items on priority queue
@@ -91,6 +50,8 @@ public class MinPQ<Key> implements Iterable<Key> {
     /**
      * Initializes a priority queue from the array of keys.
      * <p>
+     *The time complexity of the following method is O(N).
+     *As the  statment for loops ietrates upto the length of the keys arry. 
      * Takes time proportional to the number of keys, using sink-based heap construction.
      *
      * @param  keys the array of keys
@@ -107,7 +68,8 @@ public class MinPQ<Key> implements Iterable<Key> {
 
     /**
      * Returns true if this priority queue is empty.
-     *
+     *The time complexity of the following method is O(1).
+     *As the  statment execute once for each method call. 
      * @return {@code true} if this priority queue is empty;
      *         {@code false} otherwise
      */
@@ -117,7 +79,8 @@ public class MinPQ<Key> implements Iterable<Key> {
 
     /**
      * Returns the number of keys on this priority queue.
-     *
+     *The time complexity of the following method is O(1).
+     *As the  statment execute once for each method call. 
      * @return the number of keys on this priority queue
      */
     public int size() {
@@ -126,7 +89,8 @@ public class MinPQ<Key> implements Iterable<Key> {
 
     /**
      * Returns a smallest key on this priority queue.
-     *
+     *The time complexity of the following method is O(1).
+     *As the  statment execute once for each method call. 
      * @return a smallest key on this priority queue
      * @throws NoSuchElementException if this priority queue is empty
      */
@@ -135,6 +99,8 @@ public class MinPQ<Key> implements Iterable<Key> {
         return pq[1];
     }
 
+     /*The time complexity of the following method is O(N).
+     *As the  for loop iterates upto the length of the key values. */
     // helper function to double the size of the heap array
     private void resize(int capacity) {
         assert capacity > n;
@@ -147,6 +113,9 @@ public class MinPQ<Key> implements Iterable<Key> {
 
     /**
      * Adds a new key to this priority queue.
+     *The time complexity of the following method is O(logN).
+     *As we want to insert the element just we can insert and 
+     *the rearrange the all elments in the PQ.
      *
      * @param  x the key to add to this priority queue
      */
@@ -162,7 +131,9 @@ public class MinPQ<Key> implements Iterable<Key> {
 
     /**
      * Removes and returns a smallest key on this priority queue.
-     *
+     *The time complexity of the following method is O(N).
+     *As we want to delete the element in the PQ,we want to search the specific key and
+     *we want to delete it.
      * @return a smallest key on this priority queue
      * @throws NoSuchElementException if this priority queue is empty
      */
@@ -210,7 +181,8 @@ public class MinPQ<Key> implements Iterable<Key> {
             return comparator.compare(pq[i], pq[j]) > 0;
         }
     }
-
+    /*The time complexity of the following method is O(1).
+     *As the  statment execute once for each method call.*/ 
     private void exch(int i, int j) {
         Key swap = pq[i];
         pq[i] = pq[j];
@@ -218,10 +190,13 @@ public class MinPQ<Key> implements Iterable<Key> {
     }
 
     // is pq[1..N] a min heap?
+    /*The time complexity of the following method is O(1).
+     *As the  statment execute once for each method call.*/
     private boolean isMinHeap() {
         return isMinHeap(1);
     }
-
+    /*The time complexity of the following method is O(1).
+     *As the  statment execute once for each method call.*/ 
     // is subtree of pq[1..n] rooted at k a min heap?
     private boolean isMinHeap(int k) {
         if (k > n) return true;
@@ -239,6 +214,8 @@ public class MinPQ<Key> implements Iterable<Key> {
      * <p>
      * The iterator doesn't implement {@code remove()} since it's optional.
      *
+     *As the  iterator class takes the O(N) time complexity because it iterates all
+     *the items present in it. 
      * @return an iterator that iterates over the keys in ascending order
      */
     public Iterator<Key> iterator() {
@@ -268,19 +245,3 @@ public class MinPQ<Key> implements Iterable<Key> {
     }
 }
 
-//     /**
-//      * Unit tests the {@code MinPQ} data type.
-//      *
-//      * @param args the command-line arguments
-//      */
-//     public static void main(String[] args) {
-//         MinPQ<String> pq = new MinPQ<String>();
-//         while (!StdIn.isEmpty()) {
-//             String item = StdIn.readString();
-//             if (!item.equals("-")) pq.insert(item);
-//             else if (!pq.isEmpty()) StdOut.print(pq.delMin() + " ");
-//         }
-//         StdOut.println("(" + pq.size() + " left on pq)");
-//     }
-
-// }
