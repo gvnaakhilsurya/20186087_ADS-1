@@ -1,4 +1,7 @@
 import java.util.Scanner;
+/**
+ * Solution class
+ */
 public final class Solution {
     /**
      * Constructs the object.
@@ -29,3 +32,4 @@ public final class Solution {
         }
     }
 }
+
