@@ -2,6 +2,7 @@ import java.util.Scanner;
 
 /**
  * Class for solution.
+ * @author : gvnaakhilsurya.
  */
 public final class Solution {
     /**
@@ -12,7 +13,9 @@ public final class Solution {
     }
 
     /**
-     * { function_description }.
+     * In the main method we can read the input
+     * from the input files and makes as the required tokens
+     * and then sent as parameter as the specific methods.
      *
      * @param      args  The arguments
      */
@@ -47,3 +50,5 @@ public final class Solution {
 
     }
 }
+
+
