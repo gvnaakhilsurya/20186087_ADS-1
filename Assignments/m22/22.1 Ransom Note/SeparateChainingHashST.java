@@ -16,6 +16,8 @@ public class SeparateChainingHashST<Key, Value> {
 
     /**
      * Initializes an empty symbol table with {@code m} chains.
+     * By the analysis the time complexity of the below method is O(N).
+     * As the for loop iterates upto the length of the m.
      * @param m the initial number of chains
      */
     public SeparateChainingHashST(int m) {
@@ -27,6 +29,9 @@ public class SeparateChainingHashST<Key, Value> {
 
     // resize the hash table to have the given number of chains,
     // rehashing all of the keys
+    // By the analysis the time complexity of the below method is O(N^2).
+    // As the for loop iterates for the another for loop values i.e upto the
+    // no.of keys present in it.
     private void resize(int chains) {
         SeparateChainingHashST<Key, Value> temp = new SeparateChainingHashST<Key, Value>(chains);
         for (int i = 0; i < m; i++) {
@@ -40,13 +45,16 @@ public class SeparateChainingHashST<Key, Value> {
     }
 
     // hash value between 0 and m-1
+    /*By the analysis the time complexity of the below method is O(1).
+     * As the ecah statment executes once of this method.*/
     private int hash(Key key) {
         return (key.hashCode() & 0x7fffffff) % m;
     } 
 
     /**
      * Returns the number of key-value pairs in this symbol table.
-     *
+     *By the analysis the time complexity of the below method is O(1).
+     * As the statment executes once of this method for every call.
      * @return the number of key-value pairs in this symbol table
      */
     public int size() {
@@ -55,7 +63,8 @@ public class SeparateChainingHashST<Key, Value> {
 
     /**
      * Returns true if this symbol table is empty.
-     *
+     * By the analysis the time complexity of the below method is O(1).
+     * As the statment executes once of this method for every call.
      * @return {@code true} if this symbol table is empty;
      *         {@code false} otherwise
      */
@@ -65,6 +74,8 @@ public class SeparateChainingHashST<Key, Value> {
 
     /**
      * Returns true if this symbol table contains the specified key.
+     * By the analysis the time complexity of the below method is O(1).
+     * As the statment executes once of this method for every call.
      *
      * @param  key the key
      * @return {@code true} if this symbol table contains {@code key};
@@ -78,6 +89,9 @@ public class SeparateChainingHashST<Key, Value> {
 
     /**
      * Returns the value associated with the specified key in this symbol table.
+     * By the analysis the time complexity of the below method is O(N).
+     * As the method following uses the hash and the get method their
+     * complexities also added to it.
      *
      * @param  key the key
      * @return the value associated with {@code key} in the symbol table;
@@ -96,6 +110,9 @@ public class SeparateChainingHashST<Key, Value> {
      * Deletes the specified key (and its associated value) from this symbol table
      * if the specified value is {@code null}.
      *
+     * By the analysis the time complexity of the below method is O(N).
+     * As the method following uses delete method their
+     * complexities also added to it.
      * @param  key the key
      * @param  val the value
      * @throws IllegalArgumentException if {@code key} is {@code null}
@@ -117,7 +134,10 @@ public class SeparateChainingHashST<Key, Value> {
 
     /**
      * Removes the specified key and its associated value from this symbol table     
-     * (if the key is in this symbol table).    
+     * (if the key is in this symbol table).
+     *By the analysis the time complexity of the below method is O(N).
+     * As the method following uses hash,contains and method their
+     * complexities also added to it.   
      *
      * @param  key the key
      * @throws IllegalArgumentException if {@code key} is {@code null}
@@ -134,6 +154,8 @@ public class SeparateChainingHashST<Key, Value> {
     } 
 
     // return keys in symbol table as an Iterable
+     /* By the analysis the time complexity of the below method is O(N).
+     *  As the method following iterates upto the all keys present in it. */
     public Iterable<Key> keys() {
         Queue<Key> queue = new Queue<Key>();
         for (int i = 0; i < m; i++) {

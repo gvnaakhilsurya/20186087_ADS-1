@@ -16,7 +16,8 @@ public class Solution {
 	 * read the input from the files and the divided into the
 	 * tokens and pass as the arguments as the specified methods.
 	 * 
-	 * By the analysis the time complexity of the below method isO().
+	 * By the analysis the time complexity of the follwing method isO(N).
+	 * As the for loop iterates upto the N value.
 	 * 
 	 * @param      args  The arguments
 	 */
