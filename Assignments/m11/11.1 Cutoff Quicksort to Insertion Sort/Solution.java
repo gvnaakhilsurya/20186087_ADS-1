@@ -1,18 +1,20 @@
 import java.util.Scanner;
-/**
+/**.
  * Solution class
  */
 public final class Solution {
-    /**
+    /**.
      * Constructs the object.
      *
      */
     private Solution() {
         //Unused Constructor.
     }
-    /**
-     * main.
-     *
+    /**.
+     * main method.
+     * In this method we read input from the input
+     * files and then split into the tokens and then
+     * passes as the parameters to the specified methods. 
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
