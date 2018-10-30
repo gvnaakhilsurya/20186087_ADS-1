@@ -1,5 +1,2 @@
 Starting audit...
-[ERROR] H:\20186087_ADS-1\Assignments\m9\9.1 Merge Sort Improvements\Solution.java:0: File does not end with a newline. [NewlineAtEndOfFile]
-[ERROR] H:\20186087_ADS-1\Assignments\m9\9.1 Merge Sort Improvements\Solution.java:13:5: Missing a Javadoc comment. [JavadocMethod]
 Audit done.
-Checkstyle ends with 2 errors.

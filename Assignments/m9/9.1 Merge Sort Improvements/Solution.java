@@ -1,7 +1,7 @@
 import java.util.Scanner;
 /**
  *@author :gvnaakhilsurya.
- * main method
+ * Solution class.
  */
 public final class Solution {
     /**
@@ -10,6 +10,11 @@ public final class Solution {
     private  Solution() {
 
     }
+    /**
+     * It is the main method.
+     *
+     * @param      args  The arguments
+     */
     public static void main(final String[] args) {
         Scanner sc = new Scanner(System.in);
         while (sc.hasNextLine()) {
@@ -22,3 +27,4 @@ public final class Solution {
         }
     }
 }
+
