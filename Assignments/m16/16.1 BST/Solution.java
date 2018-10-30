@@ -1,5 +1,6 @@
 /**.
  * imports the Scanner package
+ * @author:gvnaakhilsurya.
  */
 import java.util.Scanner;
 /**.
@@ -8,13 +9,14 @@ import java.util.Scanner;
 public final class Solution {
     /**.
      * Constructs the object.for solution class
-     * 
      */
     private Solution() {
 
     }
     /**.
-     * main
+     * In this main method we can read the input from the input files
+     * and then make into tokens and then send as parameters as per the
+     * specified methods.
      *
      * @param      args  The arguments
      */
