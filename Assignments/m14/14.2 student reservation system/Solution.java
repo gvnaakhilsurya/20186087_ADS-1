@@ -1,116 +1,143 @@
-import java.util.Scanner;
-import java.util.Arrays;
 /**
- * Class for solution.
- * @author :gvnaakhilsurya.
+ * import Scanner class
+ */
+import java.util.Scanner;
+/**
+ * @author : gvnaakhilsurya
  */
 final class Solution {
     /**
-     * Constructs the object.
+     * Solution class for Insertion sort program.
+     *
      */
     private Solution() {
         /**
-         * { item_description }
+         * { item_description }.
          */
     }
     /**
-     * contains.
-     *
-     * @param      arr   The arr
-     * @param      val   The value
-     * @return     { description_of_the_return_value }
-     */
-    static boolean contains(final int[] arr, final int val) {
-        for (int n : arr) {
-            if (val == n) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    /**
-     * main.
+     * Main function to take inputs.
      *
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
-        Scanner scan = new Scanner(System.in);
-        int n = Integer.parseInt(scan.nextLine());
-        int vacancies = Integer.parseInt(scan.nextLine());
-        int open = Integer.parseInt(scan.nextLine());
-        int bc = Integer.parseInt(scan.nextLine());
-        int sc = Integer.parseInt(scan.nextLine());
-        int st = Integer.parseInt(scan.nextLine());
-        Details[] students = new Details[n];
-        for (int i = 0; i < n; i++) {
-            String[] input = scan.nextLine().split(",");
-            students[i] = new Details(input[0], input[1],
-            Integer.parseInt(input[2]),
-                    Integer.parseInt(input[2 + 1]),
-                    Integer.parseInt(input[2 + 2]),
-                    Integer.parseInt(input[2 + 2 + 1]), input[2 + 2 + 2]);
+    /**main method converts the given input data into
+    array objects and pass as parameters to the sorting class.**/
+        Scanner sc = new Scanner(System.in);
+        int studentsQualified = sc.nextInt();
+        int numOfvacancies = sc.nextInt();
+        int unreserved_vacancies = sc.nextInt();
+        int bc_vacancies = sc.nextInt();
+        int sch_vacancies = sc.nextInt();
+        int sct_vacancies = sc.nextInt();
+        StringBuffer sb = new StringBuffer();
+        while (sc.hasNext()) {
+            sb.append(sc.next() + "::");
         }
-        Heapsort heap = new Heapsort(students, n);
-        students = heap.sort();
-        for (int i = 0; i < n; i++) {
-            System.out.println(students[i].print());
-        }
-        System.out.println();
-        for (int j = 0; j < open; j++) {
-            System.out.println(students[j].print());
-        }
-        int[] indices = new int[bc + sc + st];
+        String[] lines = sb.toString().split("::");
         int i = 0;
-        for (int k = open; k < n; k++) {
-            if (students[k].getcategory().equals("BC") && bc > 0) {
-                indices[i++] = k;
-                bc--;
-            } else if (students[k].getcategory().
-                       equals("SC") && sc > 0) {
-                indices[i++] = k;
-                sc--;
-            } else if (students[k].getcategory().
-                       equals("ST") && st > 0) {
-                indices[i++] = k;
-                st--;
-            }
+        Student[] students = new Student[lines.length];
+        for (String line : lines) {
+            String[] tokens = line.split(",");
+            //String[] date = tokens[1].split("-");
+            Student student = new Student(tokens[0], tokens[1],
+                Integer.parseInt(tokens[2]), Integer.parseInt(tokens[3]),
+                Integer.parseInt(tokens[4]), Integer.parseInt(tokens[5]), 
+                tokens[6]);
+            students[i++] = student;
         }
-        if (bc > 0) {
-            for (int k = open; k < n; k++) {
-                if (students[k].getcategory().equals("Open") && bc > 0) {
-                    if (!contains(indices, k)) {
-                        indices[i++] = k;
-                        bc--;
-                    }
-                }
-            }
-        }
-        if (sc > 0) {
-            for (int k = open; k < n; k++) {
-                if (students[k].getcategory().equals("Open") && sc > 0) {
-                    if (!contains(indices, k)) {
-                        indices[i++] = k;
-                        sc--;
-                    }
-                }
-            }
-        }
-        if (st > 0) {
-            for (int k = open; k < n; k++) {
-                if (students[k].getcategory().equals("Open") && st > 0) {
-                    if (!contains(indices, k)) {
-                        indices[i++] = k;
-                        st--;
-                    }
-                }
-            }
-        }
-        Arrays.sort(indices);
-        for (int k = 0; k < indices.length; k++) {
-            System.out.println(students[indices[k]].print());
-        }
+        Heap.sort(students);
+        // String output = "";
+        // for (Student student : students) {
+        //     System.out.println(student);
+        // }
+        print(students);
+        allotment(students, numOfvacancies, unreserved_vacancies, bc_vacancies,
+                  sch_vacancies, sct_vacancies);
     }
+        public static void print(final Student[] students) {
+        	for (Student student : students) {
+            	System.out.println(student);
+        	}
+        	System.out.println();
+    	}
+	/**
+	 * Alloting the seats to the students based on merit.
+	 * @param students  list of students.
+	 * @param numOfvacancies number of numOfvacancies.
+	 * @param unreserved_vacancies Un-reserved category.
+	 * @param bc_vacancies      Number of BC seats.
+	 * @param sch_vacancies      Number of SC seats.
+	 * @param sct_vacancies      Number of ST seats.
+	 */
+	public static void allotment(final Student[] students,
+	                             int numOfvacancies,
+	                             int unreserved_vacancies,
+	                             int bc_vacancies,
+	                             int sch_vacancies,
+	                             int sct_vacancies) {
+	    int i = 0;
+	    int k = 0;
+	    int N = students.length;
+	    Student[] alloted = new Student[numOfvacancies];
+	    for (i = 0; i < N; i++) {
+	        if (numOfvacancies == 0) {
+	            break;
+	        }
+
+	        if (unreserved_vacancies > 0) {
+	            unreserved_vacancies--;
+	            students[i].setAlloted(true);
+	            alloted[k] = students[i];
+	            numOfvacancies--;
+	            k++;
+	        }
+
+	        if (bc_vacancies > 0) {
+	            if (students[i].getreservation().equals("BC")
+	                    && students[i].getAlloted() != true) {
+	                bc_vacancies--;
+	                students[i].setAlloted(true);
+	                alloted[k] = students[i];
+	                numOfvacancies--;
+	                k++;
+	            }
+	        }
+
+	        if (sch_vacancies > 0) {
+	            if (students[i].getreservation().equals("SC")
+	                    && students[i].getAlloted() != true) {
+	                sch_vacancies--;
+	                students[i].setAlloted(true);
+	                alloted[k] = students[i];
+	                numOfvacancies--;
+	                k++;
+	            }
+	        }
+
+	        if (sch_vacancies > 0) {
+	            if (students[i].getreservation().equals("ST")
+	                    && students[i].getAlloted() != true) {
+	                sct_vacancies--;
+	                students[i].setAlloted(true);
+	                alloted[k] = students[i];
+	                numOfvacancies--;
+	                k++;
+	            }
+	        }
+	    }
+
+	    for (i = 0; i < N; i++) {
+	        if (numOfvacancies > 0
+	                && students[i].getreservation().equals("Open")
+	                && students[i].getAlloted() == false) {
+	            students[i].setAlloted(true);
+	            alloted[k] = students[i];
+	            numOfvacancies--;
+	            k++;
+	        }
+	    }
+	    Heap.sort(alloted);
+	    print(alloted);
+	}
 }
-
-
