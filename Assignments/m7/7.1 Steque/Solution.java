@@ -15,7 +15,8 @@ public final class Solution {
 		 */
 	}
 	/**
-	 * main method to take input and call steque functions.
+	 * main method to take input from the
+	 * user input files and call steque functions.
 	 *
 	 * @param      args  The arguments
 	 */
