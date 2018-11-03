@@ -211,7 +211,7 @@ class Student implements Comparable<Student> {
     }
     /**
      * Set reservation1.
-     * 
+     *
      * @param      reservation1 The reservation.
      */
     public void setreservation(final String reservation1) {
@@ -273,3 +273,5 @@ class Student implements Comparable<Student> {
         return 0;
     }
 }
+
+
