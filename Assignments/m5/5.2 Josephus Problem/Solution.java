@@ -10,7 +10,7 @@ public final class Solution {
 	private Solution() {
 
 	}
-	/**
+	/**.
 	 * In the main method we can divide the given
 	 * input files into the tokens and the passes
 	 * through the arguments as the specified methods.
