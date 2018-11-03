@@ -1,4 +1,2 @@
 Starting audit...
-[ERROR] H:\20186087_ADS-1\Assignments\m5\5.2 Josephus Problem\Solution.java:7:1: File contains tab characters (this is the first instance). [FileTabCharacter]
 Audit done.
-Checkstyle ends with 1 errors.
