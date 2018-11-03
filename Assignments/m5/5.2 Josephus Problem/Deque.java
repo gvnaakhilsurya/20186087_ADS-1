@@ -3,7 +3,7 @@
  *
  * @param      <Item>  The item
  */
-class Deque<Item> {
+public class Deque<Item> {
 	Node first = null;
 	Node last = null;
 	int size = 0;

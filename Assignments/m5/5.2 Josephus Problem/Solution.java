@@ -1,20 +1,27 @@
 import java.util.Scanner;
-
-/**
+/**.
+ *@author:gvnaakhilsurya.
  * Class for solution.
  */
 public final class Solution {
+	/**.
+	 * Constructs the object.
+	 */
+	private Solution() {
 
+	}
 	/**
-	 * { function_description }.
+	 * In the main method we can divide the given
+	 * input files into the tokens and the passes
+	 * through the arguments as the specified methods.
 	 *
 	 * @param      args  The arguments
 	 */
 	public static void main(final String[] args) {
-		Scanner ip = new Scanner(System.in);
-		String testcases = ip.nextLine();
-		while (ip.hasNext()) {
-			String[] line = ip.nextLine().split(" ");
+		Scanner sc = new Scanner(System.in);
+		String testcases = sc.nextLine();
+		while (sc.hasNext()) {
+			String[] line = sc.nextLine().split(" ");
 			int people = Integer.parseInt(line[0]);
 			int gap = Integer.parseInt(line[1]);
 			Deque<Integer> q = new Deque<>();
