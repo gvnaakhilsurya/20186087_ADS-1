@@ -131,9 +131,8 @@ Starting audit...
 [ERROR] H:\20186087_ADS-1\remedial\Remedial-3\Student.java:74:25: '<' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] H:\20186087_ADS-1\remedial\Remedial-3\Student.java:74:26: '<' is not followed by whitespace. [WhitespaceAround]
 [ERROR] H:\20186087_ADS-1\remedial\Remedial-3\Student.java:75: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] H:\20186087_ADS-1\remedial\Remedial-3\Student.java:75: Line is longer than 80 characters (found 86). [LineLength]
 [ERROR] H:\20186087_ADS-1\remedial\Remedial-3\Student.java:76: 'if' construct must use '{}'s. [NeedBraces]
-[ERROR] H:\20186087_ADS-1\remedial\Remedial-3\Student.java:76: Line is longer than 80 characters (found 85). [LineLength]
+[ERROR] H:\20186087_ADS-1\remedial\Remedial-3\Student.java:76:50: '<' is not preceded with whitespace. [WhitespaceAround]
 [ERROR] H:\20186087_ADS-1\remedial\Remedial-3\Student.java:77: 'if' construct must use '{}'s. [NeedBraces]
 [ERROR] H:\20186087_ADS-1\remedial\Remedial-3\Student.java:77:19: 'if' is not followed by whitespace. [WhitespaceAround]
 [ERROR] H:\20186087_ADS-1\remedial\Remedial-3\Student.java:78: 'if' construct must use '{}'s. [NeedBraces]
@@ -149,4 +148,4 @@ Starting audit...
 [ERROR] H:\20186087_ADS-1\remedial\Remedial-3\Student.java:84:48: '+' is not followed by whitespace. [WhitespaceAround]
 [ERROR] H:\20186087_ADS-1\remedial\Remedial-3\Student.java:84:51: '+' is not preceded with whitespace. [WhitespaceAround]
 Audit done.
-Checkstyle ends with 107 errors.
+Checkstyle ends with 106 errors.

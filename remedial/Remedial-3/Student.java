@@ -72,8 +72,8 @@ class Student implements Comparable<Student>{
 		Student a = this;
 		if(a.rno>that.rno) return -1;
 		if(a.rno<that.rno) return 1;
-		if (Integer.valueOf(a.sname) > Integer.valueOf(that.sname)) return -1;
-		if (Integer.valueOf(a.sname) < Integer.valueOf(that.sname)) return 1;
+		if (a.sname.compareTo(that.sname) > 0)  return -1;
+		if (a.sname.compareTo(that.sname) < 0) return 1;
 		if(a.marks > that.marks) return -1;
 		if(a.marks < that.marks) return 1;
 		return 0;
@@ -87,4 +87,3 @@ class Student implements Comparable<Student>{
 
 
 
-}
