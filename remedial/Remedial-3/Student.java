@@ -6,22 +6,13 @@ class Student implements Comparable<Student>{
 	private int nstuds;
 	private int size;
 	Student[]sarray;
-	Student[]list;
-	Student[]result;
-
-	// ArrayList<Student>list = new ArrayList<Student>();
-	// ArrayList<Student>result = new ArrayList<Student>();
-
 	public Student(int rno,String sname,int marks){
-		
 		this.rno = rno;
 		this.sname = sname;
 		this.marks = marks;
 	}
 	public Student(int nstuds){
 		sarray = new Student[nstuds];
-		list = new Student[nstuds];
-		result = new Student[nstuds];
 	}
 	 public int getMarks(){
 	  return marks;
@@ -54,17 +45,27 @@ class Student implements Comparable<Student>{
 		}
 	}
 
+	public int indexOf(int query){
+		for (int i = 0;i < size;i++) {
+			if (sarray[i].getMarks()==query) {
+				return 1;
+			}
+		}
+		return 0;
+
+	}
+
 	public void getResult(int query){
 		InsertionSort.sort(sarray);
-		// System.out.println(Arrays.toString(sarray));
-		for (int i = 0;i <size;i++) {
+		if (indexOf(query) == 1) {
+			for (int i = 0;i <size;i++) {
 			if (sarray[i].getMarks()==query) {
 				System.out.println(sarray[i]);
 			}
-			
 		}
-
-		
+		}else{
+			System.out.println("This marks are not awarded to any student");
+		}
 
 	}
 	public int compareTo(Student that){
