@@ -2,11 +2,11 @@ import java.util.*;
 class Student implements Comparable<Student>{
 	private int rno;
 	private String sname;
-	private int marks;
+	private double marks;
 	private int nstuds;
 	private int size;
 	Student[]sarray;
-	public Student(int rno,String sname,int marks){
+	public Student(int rno,String sname,double marks){
 		this.rno = rno;
 		this.sname = sname;
 		this.marks = marks;
@@ -14,11 +14,11 @@ class Student implements Comparable<Student>{
 	public Student(int nstuds){
 		sarray = new Student[nstuds];
 	}
-	 public int getMarks(){
+	 public double getMarks(){
 	  return marks;
 	 }
 	 
-	 public void setMarks(int marks){
+	 public void setMarks(double marks){
 	  this.marks = marks;
 	 }
 	  public String getSname(){
@@ -45,7 +45,7 @@ class Student implements Comparable<Student>{
 		}
 	}
 
-	public int indexOf(int query){
+	public int indexOf(double query){
 		for (int i = 0;i < size;i++) {
 			if (sarray[i].getMarks()==query) {
 				return 1;
@@ -55,7 +55,7 @@ class Student implements Comparable<Student>{
 
 	}
 
-	public void getResult(int query){
+	public void getResult(double query){
 		InsertionSort.sort(sarray);
 		if (indexOf(query) == 1) {
 			for (int i = 0;i <size;i++) {
@@ -81,7 +81,7 @@ class Student implements Comparable<Student>{
 
 	}
 	public String toString(){
-		return this.rno+","+this.sname+","+(double)this.marks;
+		return this.rno+","+this.sname+","+ this.marks;
 	}
 
 

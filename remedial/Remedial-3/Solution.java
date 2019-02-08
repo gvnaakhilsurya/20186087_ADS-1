@@ -7,12 +7,12 @@ class Solution{
 		for (int i = 0;i < nstuds;i++) {
 			String[]tokens = sc.nextLine().split(",");
 			// System.out.println(Arrays.toString(tokens));
-			std.addStudent(new Student(Integer.parseInt(tokens[0]),tokens[1],(Integer.parseInt(tokens[2]))));
+			std.addStudent(new Student(Integer.parseInt(tokens[0]),tokens[1],(Double.parseDouble(tokens[2]))));
 		}
 		int quires = Integer.parseInt(sc.nextLine());
-		int gquery = 0;
+		double gquery = 0;
 		for (int j = 0;j < quires;j++) {
-			 gquery = Integer.parseInt(sc.nextLine());
+			 gquery = Double.parseDouble(sc.nextLine());
 			 std.getResult(gquery);
 		}
 		
